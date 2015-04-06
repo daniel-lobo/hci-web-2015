@@ -1,0 +1,19 @@
+body {
+  width: 950px;
+  margin: auto;
+}
+
+.product-mini img {
+  width: 100%;
+  height: 200px;
+  border: 0;
+}
+
+.product-mini .price, .product-mini .desc {
+  line-height: 40px;
+}
+
+.product-mini .price {
+  font-size: 150%;
+  text-align: right;
+}
