@@ -1,0 +1,21 @@
+#!/bin/bash
+
+ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+
+# Clean previous build:
+echo "Cleaning up"
+rm -rf www
+mkdir www
+
+# Copy assets:
+echo "Copying res/*"
+cp -r res/* www/
+
+# Render templates:
+find $ROOT/src -name '*.html' -not -name '_*' | while read input_f; do
+  # Files are rendered to the same path, under the 'www' directory:
+  output_f=www/${input_f#$ROOT/src/}
+
+  echo "Rendering $output_f"
+  bin/render.js $input_f > $output_f
+done
