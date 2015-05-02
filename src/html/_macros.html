@@ -1,0 +1,13 @@
+
+{% macro product_mini(desc, price, image = '') %}
+  <article class="product-mini">
+    <div class="thumbnail">
+      <img src="img/product_{{ image }}.jpg" alt="{{ desc }}" />
+
+      <div class="caption">
+        <p class="desc">{{ desc }}</p>
+        <p class="price">${{ price }}</p>
+      </div>
+    </div>
+  </article>
+{% endmacro %}

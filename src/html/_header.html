@@ -16,34 +16,43 @@
 <!-- end of macros -->
 
 <header id="header">
-  <h1>Neon</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <h1>Neon</h1>
+      </div>
 
-  <nav class="user">
-    <a href="faq.html"><i class="glyphicon glyphicon-question-sign"></i></a>
-    <a href="account.html"><i class="glyphicon glyphicon-user"></i></a>
-    <a href="favorites.html"><i class="glyphicon glyphicon-heart"></i></a>
-    <a href="cart.html"><i class="glyphicon glyphicon-shopping-cart"></i></a>
-  </nav>
+      <div class="col-md-4">
+        <nav class="user">
+          <a href="faq.html"><i class="glyphicon glyphicon-question-sign"></i></a>
+          <a href="account.html"><i class="glyphicon glyphicon-user"></i></a>
+          <a href="favorites.html"><i class="glyphicon glyphicon-heart"></i></a>
+          <a href="cart.html"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+        </nav>
+      </div>
+    </div>
 
-  <nav class="shop">
-    <ul class="nav navbar-nav">
-      <li>
-        <a class="home" href="index.html">Home</a>
-      </li>
+    <div class="row">
+      <nav class="shop">
+        <ul class="nav navbar-nav">
+          <li>
+            <a class="home" href="index.html">Home</a>
+          </li>
 
-      {{ category_dropdown('HOMBRES') }}
-      {{ category_dropdown('MUJERES') }}
-      {{ category_dropdown('NIÑOS') }}
-      {{ category_dropdown('NIÑAS') }}
-    </ul>
+          {{ category_dropdown('HOMBRES') }}
+          {{ category_dropdown('MUJERES') }}
+          {{ category_dropdown('NIÑOS') }}
+          {{ category_dropdown('NIÑAS') }}
+        </ul>
 
-    <ul class="search navbar-right">
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Buscar">
-        </div>
-        <button type="submit" class="btn-default"><i class="glyphicon glyphicon-search"></i></button>
-      </form>
-    </ul>
-  </nav>
+        <ul class="search">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Buscar">
+            </div>
+            <button type="submit" class="btn-default"><i class="glyphicon glyphicon-search"></i></button>
+          </form>
+        </ul>
+      </nav>
+  </div>
 </header>

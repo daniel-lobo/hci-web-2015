@@ -11,27 +11,62 @@ button   { .btn; }
   .navbar;
   .navbar-inverse;
 
+  border-radius: 0 !important;
+
   h1 {
-    color: white;
+    .center-block();
+    width: 400px;
+
+    color     : white;
+    text-align: center;
+    font-size : 46px;
+
+    margin     : 0;
+    padding    : 0;
+    line-height: 100px;
   }
 
   nav.user {
     .container-fluid;
-    display: block;
+    .pull-right;
 
     a { .btn; .btn-default; }
+
+    line-height: 100px;
+    padding-right: 0;
   }
 
   nav.shop {
-    a.home {
+    a.dropdown-toggle, a.home {
+      color: white;
     }
-
-    display: block;
   }
 
   .search {
     .nav;
     .navbar-nav;
+    .pull-right;
+  }
+}
+
+
+article.product-mini {
+  .make-md-column(4);
+
+  img {
+    height: 200px;
+    border: 0;
+    background-color: light-gray;
+  }
+
+  .caption {
+    text-align: center;
+    border-top: 1px solid #ddd;
+
+    .desc {
+      text-transform: uppercase;
+      font-size: 110%;
+    }
   }
 }
 
