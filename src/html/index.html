@@ -1,17 +1,5 @@
 {% extends './_base.html' %}
 
 {% block body %}
-<div class="container">
-  <div class="row">
-    {{ product_mini('Zapato de Cuero Copado', '940', 1) }}
-    {{ product_mini('Camisa Blanca Simpática', '440', 2) }}
-    {{ product_mini('Conjunto Negro Increíble', '720', 3) }}
-  </div>
-
-  <div class="row">
-    {{ product_mini('Remera Verde Elegante', '580', 4) }}
-    {{ product_mini('Pantalón Psicodélico', '605', 5) }}
-    {{ product_mini('Vestido Floral de Alegría', '450', 6) }}
-  </div>
-</div>
+  {% include './_listing.html' %}
 {% endblock %}
