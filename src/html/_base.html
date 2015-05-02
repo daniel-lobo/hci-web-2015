@@ -9,6 +9,8 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="style/style.css">
+    <!-- DC Social Icons CSS -->
+    <link rel="stylesheet" type="text/css" href="dreamcodes/social_icons/tsc_social_icons.css" />
   </head>
 
   <body>
@@ -17,6 +19,10 @@
     {% endblock %}
 
     {% block body %}
+    {% endblock %}
+
+    {% block footer %}
+      {% include './_footer.html' %}
     {% endblock %}
 
     {% block scripts %}
