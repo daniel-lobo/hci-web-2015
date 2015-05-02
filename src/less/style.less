@@ -1,1 +1,35 @@
 @import 'bootstrap/bootstrap';
+@import 'bootstrap/utilities';
+@import 'bootstrap/navbar';
+
+input    { .form-control; }
+fieldset { .form-group; }
+button   { .btn; }
+
+#header {
+  .navbar;
+  .navbar-inverse;
+
+  h1 {
+    color: white;
+  }
+
+  nav.user {
+    .container-fluid;
+    display: block;
+
+    a { .btn; .btn-default; }
+  }
+
+  nav.shop {
+    a.home {
+    }
+
+    display:block;
+  }
+
+  .search {
+    .nav;
+    .navbar-nav;
+  }
+}
