@@ -37,3 +37,7 @@ Para facilitar el ciclo cambiar-compilar-ver, se puede usar `relo`:
     relo src -- bin/build
 
 `relo` detecta cambios en los archivos en `src` y recompila el proyecto automáticamente
+
+## Comentarios
+
+Este website no es responsive.
