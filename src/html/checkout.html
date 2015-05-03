@@ -1,0 +1,136 @@
+{% extends './_base.html' %}
+
+{% macro cart_actions() %}
+  <div class="action row">
+  <div class="col-md-12">
+    <div class="pull-right">
+      <button class="btn-danger">Vaciar Carrito</button>
+      <button class="btn-success">Finalizar Compra</button>
+    </div>
+  </div>
+  </div>
+{% endmacro %}
+
+
+{% macro product_cart(desc, price, size, color, image) %}
+  <div class="product row">
+    <div class="col-md-2 image">
+      <img src="img/product_{{ image }}.jpg" alt="{{ desc }}">
+
+      <button class="btn-primary">Modificar</button>
+      <button class="btn-danger">Quitar</button>
+    </div>
+    <div class="col-md-4 desc">
+      <h3>{{ desc }}</h3>
+      <h4>Color {{ color }}</h4>
+      <h4>Talle {{ size }}</h4>
+    </div>
+    <div class="col-md-2 amount">
+      <select class="form-control">
+        <option>1</option>
+      </select>
+    </div>
+    <div class="col-md-2 price">${{ price }}</div>
+    <div class="col-md-2 total">${{ price }}</div>
+  </div>
+{% endmacro %}
+
+{% block body %}
+<div id="cart" class="container">
+  <div class="row">
+    <div class="col-md-6">
+        {{ location('Confirmación de compra', [
+            ['Home', 'index.html']
+        ]) }}
+    </div>
+  </div>
+
+  <div class="summary">
+    <div class="header row">
+      <div class="col-md-6">1. Informacion Personal</div>
+    </div>
+    <div class="delivery row">
+      <div class="col-md-6"><h2>Email</h2></div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" placeholder="Ingresar email">
+      </div>
+    </div>
+
+    <div class="discount row">
+      <div class="col-md-6"><h2>Contraseña</h2></div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" placeholder="Ingresar contraseña">
+      </div>
+    </div>
+
+    <div class="header row">
+      <div class="col-md-6">2. Envio</div>
+    </div>
+
+    <div class="header row">
+      <div class="col-md-6">3. Método de Pago</div>
+    </div>
+
+    <div class="header row">
+      <div class="col-md-6">4. Resumen</div>
+    </div>
+    
+    {{ product_cart('Remera Verde Elegante', '580', 27, 'Verde', 4) }}
+
+    <div class="total row">
+      <div class="col-md-2 col-md-offset-8"><h2>Total</h2></div>
+      <div class="col-md-2 total">$601</div>
+    </div>
+
+    {{ cart_actions() }}
+
+  </div>
+</div>
+
+
+
+
+
+
+<!--
+<div class="container">
+    <div>
+      <button>Registrarme</button>
+      <button>Ingresar</button>
+    </div>
+    <div>NECESITAS ESTAR REGISTRADO PARA COMPRAR</div>
+  </div>
+
+  <div class="row">
+    <div>2. ENVIO</div>
+    <div>
+      <button>Direccion Existente</button>
+      <button>Nueva Direccion</button>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+      Insertar direccion aqui
+      <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+      </ul>
+    </div>
+    <div>
+      <button>Siguiente</button>
+    </div>
+
+  </div>
+
+    <div class="row">
+      <div>3. METODOS DE PAGO</div>
+    </div>
+    <div class="row">
+      <div>4. RESUMEN</div>
+    </div>
+  </div>
+{% endblock %}-->
+
