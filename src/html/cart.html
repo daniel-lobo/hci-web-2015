@@ -1,0 +1,89 @@
+{% extends './_base.html' %}
+
+{% macro cart_actions() %}
+  <div class="action row">
+  <div class="col-md-12">
+    <div class="pull-right">
+      <button class="btn-danger">Vaciar Carrito</button>
+      <button class="btn-success">Finalizar Compra</button>
+    </div>
+  </div>
+  </div>
+{% endmacro %}
+
+
+{% macro product_cart(desc, price, size, color, image) %}
+  <div class="product row">
+    <div class="col-md-2 image">
+      <img src="img/product_{{ image }}.jpg" alt="{{ desc }}">
+
+      <button class="btn-primary">Modificar</button>
+      <button class="btn-danger">Quitar</button>
+    </div>
+    <div class="col-md-4 desc">
+      <h3>{{ desc }}</h3>
+      <h4>Color {{ color }}</h4>
+      <h4>Talle {{ size }}</h4>
+    </div>
+    <div class="col-md-2 amount">
+      <select class="form-control">
+        <option>1</option>
+      </select>
+    </div>
+    <div class="col-md-2 price">${{ price }}</div>
+    <div class="col-md-2 total">${{ price }}</div>
+  </div>
+{% endmacro %}
+
+
+{% block body %}
+<div id="cart" class="container">
+  <div class="row">
+    <div class="col-md-6">
+        {{ location('Carrito de Compras', [
+            ['Home', 'index.html']
+        ]) }}
+    </div>
+  </div>
+
+  {{ cart_actions() }}
+
+  <div class="summary">
+    <div class="header row">
+      <div class="col-md-6">Productos</div>
+      <div class="col-md-2">Cantidad</div>
+      <div class="col-md-2">Precio</div>
+      <div class="col-md-2">Total</div>
+    </div>
+
+    {{ product_cart('Remera Verde Elegante', '580', 27, 'Verde', 4) }}
+
+    <div class="delivery row">
+      <div class="col-md-6"><h2>Código Postal de Envío</h2></div>
+      <div class="col-md-2">
+        <input type="text" value="1425" disabled>
+      </div>
+      <div class="col-md-2"><h2>Costo de Envío</h2></div>
+      <div class="col-md-2 total">$21</div>
+    </div>
+
+    <div class="discount row">
+      <div class="col-md-6"><h2>Cupón de Descuento</h2></div>
+      <div class="col-md-2">
+        <input type="text" value="" disabled>
+      </div>
+      <div class="col-md-2"><h2>Descuento</h2></div>
+      <div class="col-md-2 total">-</div>
+    </div>
+
+    <div class="total row">
+      <div class="col-md-2 col-md-offset-8"><h2>Total</h2></div>
+      <div class="col-md-2 total">$601</div>
+    </div>
+
+    {{ cart_actions() }}
+
+  </div>
+</div>
+
+{% endblock %}
