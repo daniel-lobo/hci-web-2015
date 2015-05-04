@@ -49,7 +49,7 @@
     <div class="header row">
       <div class="col-md-6">1. Informacion Personal</div>
     </div>
-    <div class="delivery row">
+    <div class="discount row">
       <div class="col-md-6"><h2>Email</h2></div>
       <div class="col-md-2">
         <input type="text" class="form-control" placeholder="Ingresar email">
@@ -63,12 +63,93 @@
       </div>
     </div>
 
+    <div class="selection-area">
+      <button class="btn-primary">Registrarme</button>
+      <button class="btn-primary">Ingresar</button>
+    </div>
+
+    <div class="selection-area">
+      Necesitas estar registrado para comprar
+    </div>
+
     <div class="header row">
       <div class="col-md-6">2. Envio</div>
+    </div>
+    
+    <div class="selection-area">
+      <button class="btn-primary">Dirección Existente</button>
+      <button class="btn-primary">Dirección Nueva</button>
+    </div>
+
+    <div class="discount row">
+      <div class="col-md-5 amount">
+        <select class="form-control">
+          <option>Av. Eduardo Madero 399</option>
+          <option>Av. Cabildo 401</option>
+          <option>Av. Santa Fe 399</option>
+          <option>Av. Callao 399</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="selection-area">
+      <button class="btn-primary">Siguiente</button>
     </div>
 
     <div class="header row">
       <div class="col-md-6">3. Método de Pago</div>
+    </div>
+
+    <div class="selection-area">
+      <button class="btn-primary">Tarjeta Existente</button>
+      <button class="btn-primary">Tarjeta Nueva</button>
+    </div>
+
+    <div class="discount row">
+      <div class="col-md-6">
+        <div id="discount-text">Datos de facturacion: </div>
+        <div class="first-row-third-step">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Nombre">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Apellido"> 
+          </div>
+        </div>
+        <br/>
+        <input type="text" class="form-control" placeholder="Telefono">
+        <br/>
+        <input type="text" class="form-control" placeholder="Direccion">
+        <br/>
+        <input type="text" class="form-control" placeholder="Codigo Postal">
+      </div>
+      <div class="col-md-6">
+        <div id="discount-text">Datos de tarjeta de credito: </div>
+        <div class="first-row-third-step-2">
+          <div class="col-md-8">
+            <input type="text" class="form-control" placeholder="Numero de tarjeta">
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Cod. Seguridad"> 
+          </div>
+        </div>
+        <div class="col-md-2">Vencimiento:</div>
+        <div class="col-md-5 amount">
+          <select class="form-control">
+            <option>Mes</option>
+          </select>
+        </div>
+        <div class="col-md-5 amount">
+          <select class="form-control">
+            <option>Año</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="selection-area">
+      <button class="btn-primary">Siguiente</button>
     </div>
 
     <div class="header row">
