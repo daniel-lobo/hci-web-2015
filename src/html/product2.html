@@ -1,0 +1,15 @@
+{% extends './_product.html' %}
+
+{% block detail %}
+  {{
+    product_detail(
+      id       = 2,
+      desc     = 'Camisa Blanca Simpática',
+      brand    = 'Simple &amp; Fun',
+      price    = 440,
+      sizes    = ['XS', 'M', 'L'],
+      color    = 'Blanco',
+      material = 'Algodón'
+    )
+  }}
+{% endblock %}

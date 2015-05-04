@@ -1,0 +1,15 @@
+{% extends './_product.html' %}
+
+{% block detail %}
+  {{
+    product_detail(
+      id       = 4,
+      desc     = 'Remera Verde Elegante',
+      brand    = 'Naturawear',
+      price    = 580,
+      sizes    = ['S', 'M', 'L'],
+      color    = 'Verde',
+      material = 'Piel de Duende'
+    )
+  }}
+{% endblock %}

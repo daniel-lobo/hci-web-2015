@@ -1,0 +1,15 @@
+{% extends './_product.html' %}
+
+{% block detail %}
+  {{
+    product_detail(
+      id       = 6,
+      desc     = 'Vestido Floral de Alegría',
+      brand    = 'Wii',
+      price    = 450,
+      sizes    = ['M', 'L', 'XL'],
+      color    = 'Blanco y Azul',
+      material = 'Oveja (bicolor)'
+    )
+  }}
+{% endblock %}

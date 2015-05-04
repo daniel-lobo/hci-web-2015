@@ -1,0 +1,15 @@
+{% extends './_product.html' %}
+
+{% block detail %}
+  {{
+    product_detail(
+      id       = 5,
+      desc     = 'Pantalón Psicodélico',
+      brand    = 'UCrazy?',
+      price    = 605,
+      sizes    = ['S', 'M', 'L', 'XL'],
+      color    = 'Descaro',
+      material = 'Buenas Vibras'
+    )
+  }}
+{% endblock %}

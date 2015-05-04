@@ -59,6 +59,18 @@ article.product-mini {
     background-color: light-gray;
   }
 
+  .caption a {
+    display: block;
+    color: black;
+
+    &:hover   { color: black }
+    &:visited { color: black; font-style: underline; }
+
+    .price {
+      font-weight: bold;
+    }
+  }
+
   .caption {
     text-align: center;
     border-top: 1px solid #ddd;
@@ -300,5 +312,62 @@ article.product-mini {
     .action.row {
       margin-top: 30px;
     }
+  }
+}
+
+#product-detail {
+  .images {
+    text-align: center;
+
+    .main-container {
+      margin-top: 30px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 99%;
+    }
+
+    img.main {
+      height: 250px;
+    }
+
+    img.mini {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      float : left;
+      height: 100px;
+      width : 31%;
+      margin-right: 3%;
+      margin-top: 15px;
+    }
+
+    .mini:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .description {
+    .buy {
+      padding: 0;
+      line-height: 60px;
+      height: 60px;
+      width: 100%;
+    }
+
+    .price {
+      margin: 0;
+      line-height: 60px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      border-color: #449d44;
+    }
+  }
+}
+
+#related {
+  margin-top: 20px;
+
+  article {
+    .make-md-column(2);
   }
 }
