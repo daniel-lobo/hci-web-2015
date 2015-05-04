@@ -3,11 +3,27 @@
 {% block body %}
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-9">
         {{ location('Categorias', [
             ['Home', 'index.html']
         ]) }}
         <br>
+    </div>
+    <div class="col-md-3">
+      <div class="col-md-4">
+        <button class="btn btn-xs btn-default glyphicon glyphicon-th-large"></button>
+        <button class="btn btn-xs btn-default glyphicon glyphicon-th-list"></button>
+      </div>
+      <div class="col-md-8 dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+          Ordenar por...
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mayor precio</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Menor precio</a></li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="col-md-12">
@@ -24,6 +40,11 @@
       <div class="row">
         {{ product_mini('Remera Verde Elegante', '580', 4) }}
         {{ product_mini('Pantalón Psicodélico', '605', 5) }}
+        {{ product_mini('Camisa Blanca Simpática', '440', 2) }}
+      </div>
+      <div class="row">
+        {{ product_mini('Zapato de Cuero Copado', '940', 1) }}
+        {{ product_mini('Camisa Blanca Simpática', '440', 2) }}
         {{ product_mini('Camisa Blanca Simpática', '440', 2) }}
       </div>
     </div>
