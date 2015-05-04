@@ -1,0 +1,15 @@
+{% extends './_product.html' %}
+
+{% block detail %}
+  {{
+    product_detail(
+      id       = 3,
+      desc     = 'Conjunto Negro Increíble',
+      brand    = 'DeNoche',
+      price    = 720,
+      sizes    = ['XS', 'S', 'M'],
+      color    = 'Negro',
+      material = 'Obsidiana'
+    )
+  }}
+{% endblock %}

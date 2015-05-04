@@ -1,0 +1,15 @@
+{% extends './_product.html' %}
+
+{% block detail %}
+  {{
+    product_detail(
+      id       = 1,
+      desc     = 'Zapato de Cuero Copado',
+      brand    = 'Pies Felices',
+      price    = 940,
+      sizes    = [22, 23, 24, 25],
+      color    = 'Marrón',
+      material = 'Cuero'
+    )
+  }}
+{% endblock %}
