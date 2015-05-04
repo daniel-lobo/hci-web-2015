@@ -1,0 +1,33 @@
+{% extends './_base.html' %}
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        {{ location('Categorias', [
+            ['Home', 'index.html']
+        ]) }}
+        <br>
+    </div>
+  </div>
+  <div class="col-md-12">
+  <div class="row">
+    <div class="col-md-4">
+      {% include './_sidebar.html' %}
+    </div>
+    <div class="col-md-7">
+      <div class="row">
+        {{ product_mini('Zapato de Cuero Copado', '940', 1) }}
+        {{ product_mini('Camisa Blanca Simpática', '440', 2) }}
+        {{ product_mini('Camisa Blanca Simpática', '440', 2) }}
+      </div>
+      <div class="row">
+        {{ product_mini('Remera Verde Elegante', '580', 4) }}
+        {{ product_mini('Pantalón Psicodélico', '605', 5) }}
+        {{ product_mini('Camisa Blanca Simpática', '440', 2) }}
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}
